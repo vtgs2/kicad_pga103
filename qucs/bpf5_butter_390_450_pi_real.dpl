@@ -1,0 +1,25 @@
+<Qucs Schematic 1.1.0>
+<Properties>
+  <View=0,0,800,800,1,0,0>
+  <Grid=10,10,0>
+  <DataSet=bpf5_butter_390_450_pi_real.dat>
+  <DataDisplay=bpf5_butter_390_450_pi_real.sch>
+  <OpenDisplay=1>
+  <Script=bpf5_butter_390_450_pi_real.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Title>
+  <FrameText1=Drawn By:>
+  <FrameText2=Date:>
+  <FrameText3=Revision:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+</Diagrams>
+<Paintings>
+</Paintings>
