@@ -1759,7 +1759,7 @@
   (gr_text "FALSE" (at 107.315 108.585) (layer "B.SilkS") (tstamp 75f00925-de30-4157-8186-d982cafbd907)
     (effects (font (size 0.762 0.762) (thickness 0.1524) bold) (justify left bottom mirror))
   )
-  (gr_text "1.0{dblquote}" (at 114.3 120.65) (layer "B.SilkS") (tstamp 7a8139e2-5c30-4b51-932c-d368b2db90c0)
+  (gr_text "1.25{dblquote}" (at 114.3 120.65) (layer "B.SilkS") (tstamp 7a8139e2-5c30-4b51-932c-d368b2db90c0)
     (effects (font (size 1.016 1.016) (thickness 0.2032) bold) (justify bottom mirror))
   )
   (gr_text "1.0{dblquote}" (at 124.46 114.3 90) (layer "B.SilkS") (tstamp 7c284dc0-6f17-445e-bec1-a09842c40e44)
