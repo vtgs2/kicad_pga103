@@ -6,8 +6,8 @@ Multiple Variants:
 - Version 1: Unfiltered
 - Version 2: Mini Circuits RBP-XXX Bandpass Filter
 - Version 3: Mini Circuits SXBP-XXX Bandpass Filter
-- Version 4: Dual Gain, RBP-XXX
-- Version 5: Dual Gain, SXBP-XXX
+- Version 4: Dual Gain, RBP-XXX (Future)
+- Version 5: Dual Gain, SXBP-XXX (Future)
 
 
 
