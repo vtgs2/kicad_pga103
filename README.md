@@ -3,7 +3,8 @@
 KiCAD Designs for PGA-103+ Preamplifier (LNA) intended for use in VHF / UHF Satellite Reception.  
 
 This is a catchall repo for multiple designs and multiple variants.  
-The variants will be based on physical size, enclosure dimensions, and specific features. 
+The variants will be based on physical size, enclosure dimensions, and specific features.  
+This is a fluid repo that wil be changing as time allows to include updates for parts selection and user guide for how to configure for different bands.  
 
 ## Shut up and give me the board
 
@@ -16,6 +17,39 @@ Completed Designs:
 [v2.0.0.0, rev-](https://oshpark.com/shared_projects/KYiMNU72)  
 [v2.1.X.0, rev-](https://oshpark.com/shared_projects/wypFvs1c)  
 [v2.2.X.0, rev-](https://oshpark.com/shared_projects/yOYgdtt8)  
+
+## Major Design Features
+
+### Active Device
+Primary active device is the popular [PGA-103+](https://www.minicircuits.com/WebStore/dashboard.html?model=PGA-103%2B).
+Expect >20 dB Gain and <1.0 dB Noise Figure for both VHF and UHF bands.  
+
+### Bias Options
+Multiple biasing options via solder jumpers on the board.  
+See board silkscreen for solder jumper settings for selecting the methods described below.
+
+#### DC on Coax, +12V
+The primary expected method for powering the board.  
+This method routes DC power from the output RF connector to the internal voltage regulator for power conditioning, filtering, and biasing the amp.  
+A bias-t will be required on the other end of the coax close to the radio.  
+A custom Bias-T design may be added to this repo, but for now here are some COTS options:
+- Minicircuits [ZDPLX-2150-S+](https://www.minicircuits.com/WebStore/dashboard.html?model=ZDPLX-2150-S%2B) where the Low Pass port is for DC. Be careful about current draw requirements if using long coax runs as this has a fairly low current limit of about 100mA.  Have succesfully used this on multiple compact systems in the past.
+- Minicircuits [ZABT-2R15G+](https://www.minicircuits.com/WebStore/dashboard.html?model=ZABT-2R15G%2B). This Bias-T allows 3A of DC current and also includes ability to inject a 10 MHz reference signal (not needed for this specific preamp design, but might be useful for future projects for distributing REF oscillator signals to antenna mounted components such as downconverters).
+- [Kuhne Electronic Bias-Ts](https://www.kuhne-electronic.com/funk/en/shop/industrial/prof-passive-compone/prof-bias-tees/).  Pricey, but work well. They offer N and SMA variants.
+
+##### Lightning Arrestors
+If using the DC on coax methods and if using lightning arrestors (you should be!), be sure to select arrestors that allow DC pass through.  I typically connect bias-ts directly to the lightning arrestors inside the enclosure on the 'equipment' side of the arrestor using barrel N or SMA connectors.
+
+#### DC on Coax, Direct 5V
+DC on coax can be routed to AVOID the onboard voltage regulator and directly bias the PGA-103+ device.  
+This method may be suitable for SDRs that have built in Bias-Ts, such as the popular [RTL-SDR](https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/) that has a built in 4.5V bias-T.
+
+#### External DC
+This method does not interact with RF output connector and supplies power to the onboard voltage regulator.  
+The supplied DC Voltage should be between 6V and 16V as measured at the board input pads (consider DC voltage drop if running long external power lines).  
+The current mechanical designs for enclosure do not include penetrations for external power.  
+If adding external power, feed through capacitors / EMI filters are recommended. Something like [this](https://www.digikey.com/en/products/detail/tusonix-a-subsidiary-of-cts-electronic-components/4400-034LF/2079728).
+
 
 
 ## Version Description
