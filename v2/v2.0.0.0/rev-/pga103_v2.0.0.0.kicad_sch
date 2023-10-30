@@ -5,7 +5,7 @@
   (paper "A")
 
   (title_block
-    (title "PGA-103+ Preamplifier, Version 2.1.0.0")
+    (title "PGA-103+ Preamplifier, Version 2.0.0.0")
     (date "2023-10-02")
     (rev "-")
     (company "VTGS, GSN-SDA")
